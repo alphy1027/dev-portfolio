@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${primary.variable} ${secondary.variable} antialiased  flex flex-col gap-y-space-6`}>
+      <body className={`${primary.variable} ${secondary.variable} antialiased  flex flex-col`}>
         <Header />
         <main className="flex min-h-screen w-full flex-1 flex-col gap-space-6 ">{children}</main>
         <Footer />

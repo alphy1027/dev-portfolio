@@ -7,17 +7,17 @@ export const about = {
   resume: {
     pdf: {
       label: "Download as PDF",
-      link: "",
+      link: "/dev-resume.pdf",
       icon: PdfIcon,
     },
     notion: {
       label: "View on Notion",
-      link: "",
+      link: "https://smiling-keeper-7be.notion.site/Resume-1dcd358b5dbd80baa30bf2080940f567?source=copy_link",
       icon: NotionIcon,
     },
     linkedin: {
       label: "View on Linkedin",
-      link: "",
+      link: "https://www.linkedin.com/in/alphy1027",
       icon: LinkedinIcon,
     },
   },

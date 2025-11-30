@@ -13,6 +13,7 @@ export default function ResumeLink({ href, label, icon: Icon }: ResumeProps) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        download={label.includes("PDF")}
         className="py-space-2 px-space-5 flex items-center justify-center gap-space-2"
       >
         <Icon />
