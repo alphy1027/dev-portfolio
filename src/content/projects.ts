@@ -4,6 +4,7 @@ import WebIcon from "@/app/home/icons/brands/WebIcon";
 import { JSX } from "react";
 
 export interface Project {
+  id: number;
   title: string;
   image: string;
   stack: string;
@@ -17,7 +18,7 @@ export interface Project {
 }
 [];
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 1,
     title: "Fralon Peanuts",
