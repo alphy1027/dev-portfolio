@@ -4,18 +4,18 @@ import ProjectTag from "./ProjectTag";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="border-b-4 border-primary shadow-md">
+    <article className="border-b-4 border-primary gap-space-2 flex flex-col shadow-md h-full">
       <div className="bg-neutral-light w-full h-[164px]" />
-      <section className="flex-col mt-2 flex items-center gap-space-4 h-full px-space-6 py-space-4">
+      <section className="flex-col flex items-center flex-1 gap-space-4 px-space-6 py-space-4">
         <div className="flex flex-col justify-center items-center gap-space-1">
           <small className="text-primary bg-neutral-light px-space-2 py-space-1 capitalize rounded-surface-radius">
             {project.stack}
           </small>
           <h4 className="text-foreground-heading">{project.title}</h4>
         </div>
-        <p className="text-center">{project.description}</p>
+        <p className="text-center flex-1">{project.description}</p>
 
-        <div className="flex flex-wrap items-center justify-center gap-space-1">
+        <div className="flex flex-wrap max-w-[258px] items-center justify-center gap-space-1">
           {project.tags.map((tag, index) => (
             <ProjectTag key={index} label={tag} />
           ))}
