@@ -6,17 +6,17 @@ export const about = {
   body: "I’m Alphones Odhiambo, a self-taught fullstack web developer focused on building scalable and user-centered applications with the MERN stack. Known for a strong attention to detail, self-motivation, and a commitment to doing things the right way. I follow modular design principles to create clean, reusable, and maintainable code. I’m driven by a passion for continuous learning and dedicated to building solutions that deliver real-world impact.",
   resume: {
     pdf: {
-      label: "Download as PDF",
+      label: "PDF Resume",
       link: "/dev-resume.pdf",
       icon: PdfIcon,
     },
     notion: {
-      label: "View on Notion",
+      label: "Notion Resume",
       link: "https://smiling-keeper-7be.notion.site/Resume-1dcd358b5dbd80baa30bf2080940f567?source=copy_link",
       icon: NotionIcon,
     },
     linkedin: {
-      label: "View on Linkedin",
+      label: "Linkedin Resume",
       link: "https://www.linkedin.com/in/alphy1027",
       icon: LinkedinIcon,
     },
