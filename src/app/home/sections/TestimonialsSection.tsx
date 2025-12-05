@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export default function TestimonialsSection() {
   return (
-    <div className="bg-secondary ">
+    <div id="testimonials" className="bg-secondary ">
       <SectionContainer className="flex flex-col items-center justify-center gap-space-5 max-w-[520px] py-space-6">
         <SectionTitle caption="Testimonials" className="text-secondary-surface-heading">
           Here's what a few people I've worked with have to say about my work

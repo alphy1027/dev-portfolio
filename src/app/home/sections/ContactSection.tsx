@@ -9,7 +9,7 @@ import ContactForm from "../components/contact/ContactForm";
 
 export default function ContactSection() {
     return (
-        <SectionContainer className="flex flex-col items-center gap-space-5">
+        <SectionContainer id="contact" className="flex flex-col items-center gap-space-5">
             <div className="max-w-xl flex flex-col items-center gap-space-4">
                 <SectionTitle caption="Contact me">Feel free to reach out</SectionTitle>
                 <p className="text-center">Whether you have a question, an opportunity, or just want to connect, I’m always open to conversations — I’ll respond as soon as I can.</p>

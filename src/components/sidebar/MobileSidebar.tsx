@@ -8,7 +8,6 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import Link from "next/link";
 import { Menu, XIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import Logo from "@/app/home/icons/Logo";
@@ -18,10 +17,10 @@ export default function MobileSidebar() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="ghost" className="md:hidden p-1.5 rounded-surface-radius" ><Menu className=" size-6" /></Button>
+                <Button variant="ghost" size="sm" className="md:hidden p-space-2 rounded-surface-radius" ><Menu className=" size-8" /></Button>
             </SheetTrigger>
-            <SheetContent side="left" className="p-space-4 justify-between gap-y-space-6">
-                <SheetHeader className="flex-row items-center justify-between">
+            <SheetContent side="left" className="p-space-4 flex flex-col justify-between gap-y-space-6">
+                <SheetHeader className="flex-row items-center p-0 justify-between">
                     <SheetTitle asChild>
                         <SheetClose asChild>
                             <Logo />
@@ -31,20 +30,21 @@ export default function MobileSidebar() {
                     <SheetClose asChild>
                         <Button
                             variant="ghost"
-                            className="p-1 translate-x-1 "><XIcon className="text-foreground-mute size-6" /></Button>
+                            size="sm"
+                            className="translate-x-1 p-space-2 rounded-surface-radius"><XIcon className="text-foreground-muted size-8" /></Button>
                     </SheetClose>
                 </SheetHeader>
-                <nav className="w-full p-space-2">
+                <nav className="w-full p-space-4">
                     <ul className="divide-y divide-foreground-border flex flex-col">
                         {navLinks.map((navLink) => (
                             <li key={navLink.href} className="flex">
                                 <SheetClose asChild>
-                                    <Link
+                                    <a
                                         href={`#${navLink.href}`}
-                                        className="py-space-3 w-full tracking-wide active:scale-105 duration-200 ease-in transition font-heading uppercase active:text-primary text-center font-semibold text-lg"
+                                        className="py-space-3 w-full tracking-wide active:scale-95 duration-200 ease-in transition font-heading uppercase active:text-primary text-center font-medium text-lg"
                                     >
                                         {navLink.label}
-                                    </Link>
+                                    </a>
                                 </SheetClose>
                             </li>
                         ))}
