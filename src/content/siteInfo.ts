@@ -1,4 +1,4 @@
 export const siteInfo = {
-  siteURL: /* process.env.SITE_URL ||  */ "http://localhost:3000",
+  siteURL: process.env.SITE_URL || "https://dev-portfolio-tawny-omega.vercel.app/",
   siteName: "Alphones Odhiambo",
 };
