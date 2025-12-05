@@ -57,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body className={`${primary.variable} ${secondary.variable} antialiased  flex flex-col`}>
         <Header />
         <main className="flex min-h-screen w-full flex-1 flex-col gap-space-6 ">{children}</main>

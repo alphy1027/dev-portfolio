@@ -1,5 +1,4 @@
 import { Resend } from "resend";
-import { contacts } from "@/content/contacts";
 import ContactEmailTemplate from "@/components/emails/ContactEmailTemplate";
 import { FormInputs } from "@/actions/formAction";
 
@@ -10,7 +9,7 @@ export async function POST(req: Request) {
     try {
         const { data, error } = await resend.emails.send({
             from: 'Alphy.dev <onboarding@resend.dev>',
-            to: [contacts.email.label],
+            to: ["knundahalphones@gmail.com"],
             subject: "New Contact form submission",
             replyTo: formData.email,
             react: ContactEmailTemplate({ formData }),

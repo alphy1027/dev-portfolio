@@ -138,8 +138,8 @@
   --neutral-light: #d1fae5;
   --neutral-dark: #0f172a;
 
-  --background: #f9fafb;
-  --foreground-body: #374151;
+  --background: #0f172a;
+  --foreground-body: #f9fafb;
   --foreground-heading: #1e293b;
   --foreground-border: #6b7280;
   --foreground-muted: #6b7280;
@@ -160,14 +160,6 @@
   --icon-surface-secondary: #cbd5e1;
   --plain-white: #94a3b8;
 }
-
-/* *,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
 
 @layer base {
   body {

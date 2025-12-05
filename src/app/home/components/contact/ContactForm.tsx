@@ -11,7 +11,8 @@ export default function ContactForm() {
     const [state, formAction, isPending] = useActionState(action, null)
     console.log("State ::", state)
     return (
-        <form action={formAction} className="w-full flex-col flex gap-space-4 p-space-4">
+        <form action={formAction} className="w-full flex-col flex gap-space-4 sm:p-space-4">
+            {/* <FormResponse type="error" message="Failed to send message, check your internet connection" /> */}
             <div className="flex flex-col gap-space-2">
                 <Label htmlFor="fullName">Full Name</Label>
                 <Input disabled={isPending} required minLength={3} id="fullName" type="text" placeholder="Full Name" />
