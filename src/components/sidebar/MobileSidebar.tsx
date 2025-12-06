@@ -41,7 +41,7 @@ export default function MobileSidebar() {
                                 <SheetClose asChild>
                                     <a
                                         href={`#${navLink.href}`}
-                                        className="py-space-3 w-full tracking-wide active:scale-95 duration-200 ease-in transition font-heading uppercase active:text-primary text-center font-medium text-lg"
+                                        className="py-space-4 w-full tracking-wide active:scale-95 duration-200 ease-in transition font-heading uppercase active:text-primary text-center font-medium text-lg"
                                     >
                                         {navLink.label}
                                     </a>

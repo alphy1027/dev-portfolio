@@ -167,7 +167,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "sm:absolute size-8 rounded-surface-radius",
+        "sm:absolute size-10 rounded-surface-radius",
         orientation === "horizontal"
           ? "sm:top-1/2 sm:-left-12 sm:-translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -197,7 +197,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "sm:absolute ml-space-4 sm:ml-0 size-8 rounded-surface-radius",
+        "sm:absolute ml-space-4 sm:ml-0 size-10 rounded-surface-radius",
         orientation === "horizontal"
           ? " sm:top-1/2 sm:-right-12 sm:-translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

@@ -13,7 +13,7 @@ export default function SectionTitle({ className, caption, children }: TitleProp
       <Activity mode={caption ? "visible" : "hidden"}>
         <small className="text-primary font-heading text-xs uppercase">{caption}</small>
       </Activity>
-      <h2 className={twMerge("w-fit text-foreground-heading text-center", className)}>{children}</h2>
+      <h2 className={twMerge("w-fit text-foreground-heading dark:text-neutral-surface-heading text-center", className)}>{children}</h2>
     </div>
   );
 }

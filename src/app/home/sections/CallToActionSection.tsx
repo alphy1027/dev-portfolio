@@ -1,5 +1,5 @@
 import SectionContainer from "@/components/section/SectionContainer";
-import { Button } from "@/components/ui/button";
+import { contacts } from "@/content/contacts";
 import { Phone } from "lucide-react";
 
 export default function CallToActionSection() {
@@ -7,10 +7,12 @@ export default function CallToActionSection() {
     <section className="bg-primary w-full py-space-4">
       <SectionContainer className="flex flex-col sm:flex-row items-center gap-space-4 justify-between max-w-[1000px]">
         <h2 className="text-secondary text-center">Let's build something great</h2>
-        <Button variant="secondary">
+
+        <a href={contacts.phone.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-space-3 px-space-6 py-space-4 rounded-surface-radius bg-secondary text-plain-white text-lg font-semibold hover:scale-105 active:scale-95 transition duration-200 ease-in">
           <Phone />
           Call me now
-        </Button>
+        </a>
+
       </SectionContainer>
     </section>
   );

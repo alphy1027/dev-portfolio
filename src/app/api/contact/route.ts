@@ -1,10 +1,10 @@
 import { Resend } from "resend";
 import ContactEmailTemplate from "@/components/emails/ContactEmailTemplate";
-import { FormInputs } from "@/actions/formAction";
+import { ContactResponse, FormInputs } from "@/actions/formAction";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<ContactResponse> {
     const formData: FormInputs = await req.json();
     try {
         const { data, error } = await resend.emails.send({
@@ -17,12 +17,12 @@ export async function POST(req: Request) {
 
         if (error) {
             console.log("Email Error :: ", error.message);
-            return Response.json({ success: false, error }, { status: 500 });
+            return ({ success: false, message: error.message });
         }
+        console.log("Email success :: ", data);
 
-        return Response.json({ success: true, data });
+        return ({ success: true, message: "Message sent successfully" });
     } catch (error) {
-        console.log("Email Error :: ", error);
-        return Response.json({ success: false, error }, { status: 500 });
+        return ({ success: false, message: "Failed to send Message, please try again" });
     }
 }

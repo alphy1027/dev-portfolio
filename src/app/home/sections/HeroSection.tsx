@@ -1,3 +1,4 @@
+"use client"
 import SectionContainer from "@/components/section/SectionContainer";
 import { Button } from "@/components/ui/button";
 
@@ -10,8 +11,8 @@ export default function HeroSection() {
           I create reliable backend systems and intuitive frontends for real-world use cases
         </p>
         <div className="flex flex-col w-full sm:w-fit sm:flex-row items-center gap-space-4 md:gap-space-5">
-          <Button className="w-full sm:w-fit">Explore my work</Button>
-          <Button variant="secondary" className="w-full sm:w-fit">
+          <Button onClick={() => document.querySelector("#portfolio")?.scrollIntoView()} className="w-full sm:w-fit">Explore my work</Button>
+          <Button onClick={() => document.querySelector("#contact")?.scrollIntoView()} variant="secondary" className="w-full sm:w-fit">
             Contact me
           </Button>
         </div>
