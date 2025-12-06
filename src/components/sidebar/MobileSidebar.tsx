@@ -17,7 +17,7 @@ export default function MobileSidebar() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="md:hidden p-space-2 rounded-surface-radius" ><Menu className=" size-8 text-foreground-body" /></Button>
+                <Button variant="ghost" size="sm" className="md:hidden p-space-2 rounded-surface-radius" ><Menu className="size-8 text-foreground-body" /></Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-space-4 flex flex-col justify-between gap-y-space-6">
                 <SheetHeader className="flex-row items-center p-0 justify-between">
