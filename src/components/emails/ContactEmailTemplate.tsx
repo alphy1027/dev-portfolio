@@ -10,7 +10,7 @@ import {
   Section,
   Text,
 } from '@react-email/components';
-import { FormInputs } from '@/actions/formAction';
+import { FormInputs } from '@/app/actions/formAction';
 import Logo from '@/app/home/icons/Logo';
 import { siteInfo } from '@/content/siteInfo';
 

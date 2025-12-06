@@ -1,18 +1,24 @@
 "use client"
-import { action } from "@/actions/formAction";
+import { action } from "@/app/actions/formAction";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Loading from "@/components/ui/Loading";
 import { Textarea } from "@/components/ui/textarea";
 import { useActionState } from "react";
+import FormResponse from "./FormResponse";
 
 export default function ContactForm() {
     const [state, formAction, isPending] = useActionState(action, { success: false, message: "" })
     console.log("State ::", state)
     return (
         <form action={formAction} className="w-full flex-col flex gap-space-4 sm:p-space-4">
-            {/* <FormResponse type="error" message="Failed to send message, check your internet connection" /> */}
+            {state.success && state.message &&
+                <FormResponse type="success" message={state.message} />
+            }
+            {!state.success && state.message &&
+                <FormResponse type="error" message={state.message} />
+            }
             <div className="flex flex-col gap-space-2">
                 <Label htmlFor="fullName">Full Name</Label>
                 <Input disabled={isPending} name="fullName" required minLength={3} id="fullName" type="text" placeholder="Full Name" />
