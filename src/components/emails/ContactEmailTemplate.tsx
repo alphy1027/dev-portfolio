@@ -5,13 +5,13 @@ import {
   Head,
   Hr,
   Html,
+  Img,
   Link,
   Preview,
   Section,
   Text,
 } from '@react-email/components';
 import { FormInputs } from '@/app/actions/formAction';
-import Logo from '@/app/home/icons/Logo';
 import { siteInfo } from '@/content/siteInfo';
 
 interface TemplateProps {
@@ -28,7 +28,12 @@ export const ContactEmailTemplate = ({ formData }: TemplateProps) => (
       <Container style={container}>
         <Section style={logoSection}>
           <Link style={logo} target="_blank" href={baseUrl}>
-            <Logo />
+            <Img
+              width="56"
+              height="56"
+              src={`${baseUrl}/logo.svg`}
+              alt="Alphy1027 logo"
+            />
           </Link>
         </Section>
 

@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteInfo } from "@/content/siteInfo";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
+import { Toaster } from "react-hot-toast";
 
 const primary = Afacad({
   variable: "--font-primary",
@@ -57,8 +58,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="dark" >
       <body className={`${primary.variable} ${secondary.variable} antialiased  flex flex-col`}>
+        <Toaster position="top-center" />
         <Header />
         <main className="flex min-h-screen w-full flex-1 flex-col gap-space-6 ">{children}</main>
         <Footer />

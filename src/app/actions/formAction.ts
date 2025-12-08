@@ -16,7 +16,6 @@ export interface ContactResponse {
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function action(_previousState: any, formData: FormData): Promise<ContactResponse> {
-    console.log("form data", formData)
     const formValues: FormInputs = {
         fullName: formData.get("fullName") as string,
         email: formData.get("email") as string,
@@ -28,7 +27,7 @@ export async function action(_previousState: any, formData: FormData): Promise<C
     }
 
     try {
-        const { data, error } = await resend.emails.send({
+        const { error } = await resend.emails.send({
             from: 'Alphy.dev <onboarding@resend.dev>',
             to: ["knundahalphones@gmail.com"],
             subject: "New Contact form submission",
@@ -37,13 +36,11 @@ export async function action(_previousState: any, formData: FormData): Promise<C
         });
 
         if (error) {
-            console.log("Email Error :: ", error.message);
-            return ({ success: false, message: error.message });
+            return { success: false, message: error.message };
         }
-        console.log("Email success :: ", data);
 
-        return ({ success: true, message: "Message sent successfully" });
+        return { success: true, message: "Message sent successfully" }
     } catch (error) {
-        return ({ success: false, message: "Failed to send Message, please try again" });
+        return { success: false, message: "Failed to send Message, please try again" };
     }
 };

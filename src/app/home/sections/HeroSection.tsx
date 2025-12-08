@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <SectionContainer className="flex justify-center h-[75vh]">
       <div className="max-w-[600px] md:max-w-[634px] flex flex-col gap-space-4 items-center justify-center">
-        <h1 className="text-center">Turning Ideas Into Scalable Web Applications</h1>
+        <h1 className="text-center dark:text-white">Turning Ideas Into Scalable Web Applications</h1>
         <p className="text-center">
           I create reliable backend systems and intuitive frontends for real-world use cases
         </p>
