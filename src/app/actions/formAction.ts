@@ -36,7 +36,7 @@ export async function action(_previousState: any, formData: FormData): Promise<C
         });
 
         if (error) {
-            return { success: false, message: error.message };
+            return { success: false, message: "Failed to send Message, please try again" };
         }
 
         return { success: true, message: "Message sent successfully" }

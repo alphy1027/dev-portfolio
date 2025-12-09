@@ -58,9 +58,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" >
+    <html lang="en" className="" >
       <body className={`${primary.variable} ${secondary.variable} antialiased  flex flex-col`}>
-        <Toaster position="top-center" />
+        <Toaster position="top-center" gutter={8} toastOptions={{ duration: 10000 }} />
         <Header />
         <main className="flex min-h-screen w-full flex-1 flex-col gap-space-6 ">{children}</main>
         <Footer />

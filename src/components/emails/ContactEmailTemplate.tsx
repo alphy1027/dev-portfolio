@@ -29,6 +29,7 @@ export const ContactEmailTemplate = ({ formData }: TemplateProps) => (
         <Section style={logoSection}>
           <Link style={logo} target="_blank" href={baseUrl}>
             <Img
+              style={{ margin: "0 auto" }}
               width="56"
               height="56"
               src={`${baseUrl}/logo.svg`}
