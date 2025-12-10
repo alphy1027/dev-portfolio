@@ -22,22 +22,19 @@ const secondary = Oswald({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteInfo.siteURL),
-  title: "Alphy1027",
-  description: "Web developer, software developer in Nairobi, Kenya",
+  title: "Alphones Odhiambo - Web Developer | Modern Frontend & Full-Stack Projects",
+  description: "Portfolio of Alphones Odhiambo, a fullstack web developer building clean, fast, and modern web experiences using MERN stack. Located in Nairobi, Kenya",
   openGraph: {
-    title: {
-      default: "Airstream cooling systems Kenya",
-      template: "%s | AirStream cooling systems Kenya",
-    },
+    title: "Alphones Odhiambo - Web Developer | Full-Stack Developer",
     description:
-      "From installation and repair to maintenance and genuine spare parts, AirStream keeps your spaces cool, efficient, and reliable. Trusted HVAC and refrigeration solutions for homes and businesses in Kenya.",
+      "Explore the work and projects of Alphones Odhiambo, a Web Developer building modern web experiences",
     siteName: siteInfo.siteName,
     images: [
       {
         url: "",
         width: 1200,
         height: 630,
-        alt: "AirStream HVAC & Refrigeration Experts in Kenya",
+        alt: "",
       },
     ],
     locale: "en_KE",
@@ -45,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Airstream HVAC & Refrigeration Experts in Kenya",
+    title: "Alphones Odhiambo - Web Developer | Full-Stack Developer",
     description:
-      "From installation and repair to maintenance and genuine spare parts, AirStream keeps your spaces cool, efficient, and reliable. Trusted HVAC and refrigeration solutions for homes and businesses in Kenya.",
+      "Explore the work and projects of Alphones Odhiambo, a Web Developer building modern web experiences",
     images: [""],
   },
 };

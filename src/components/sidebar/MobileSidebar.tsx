@@ -25,6 +25,11 @@ export default function MobileSidebar() {
     const closeSidebar = () => {
         setOpen(false)
     }
+
+    const navigateToSection = (section: string) => {
+        closeSidebar()
+        document.querySelector(`#${section}`)?.scrollIntoView()
+    }
     return (
         <Sheet open={open}>
             <SheetTrigger asChild>
@@ -50,10 +55,10 @@ export default function MobileSidebar() {
                 <nav className="w-full p-space-4">
                     <ul className="divide-y divide-foreground-border flex flex-col">
                         {navLinks.map((navLink) => (
-                            <li onClick={closeSidebar} key={navLink.href} className="flex">
+                            <li key={navLink.href} className="flex">
                                 <a
 
-                                    href={`#${navLink.href}`}
+                                    onClick={() => navigateToSection(navLink.href)}
                                     className="py-space-4 w-full tracking-wide active:scale-95 duration-200 ease-in transition font-heading uppercase active:text-primary text-center font-medium text-lg"
                                 >
                                     {navLink.label}

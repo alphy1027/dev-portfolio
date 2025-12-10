@@ -6,9 +6,10 @@ export default function HeroSection() {
   return (
     <SectionContainer className="flex justify-center h-[75vh]">
       <div className="max-w-[600px] md:max-w-[634px] flex flex-col gap-space-4 items-center justify-center">
-        <h1 className="text-center dark:text-white">Turning Ideas Into Scalable Web Applications</h1>
+        <h1 className="text-center dark:text-white">Fullstack Web Developer building modern, fast, responsive and scalable web experiences
+        </h1>
         <p className="text-center">
-          I create reliable backend systems and intuitive frontends for real-world use cases
+          Passionate about designing and developing web interfaces and full-stack applications with a focus on speed, usability and seamless user experiences across every device while bringing ideas to life
         </p>
         <div className="flex flex-col w-full sm:w-fit sm:flex-row items-center gap-space-4 md:gap-space-5">
           <Button onClick={() => document.querySelector("#portfolio")?.scrollIntoView()} className="w-full sm:w-fit">Explore my work</Button>
