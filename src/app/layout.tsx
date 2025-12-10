@@ -3,8 +3,8 @@ import { Oswald, Afacad } from "next/font/google";
 import "./globals.css";
 import { siteInfo } from "@/content/siteInfo";
 import Footer from "@/components/footer/Footer";
-import Header from "@/components/header/Header";
 import { Toaster } from "react-hot-toast";
+import SidebarAndHeader from "@/components/header/components/SidebarAndHeader";
 
 const primary = Afacad({
   variable: "--font-primary",
@@ -58,7 +58,7 @@ export default function RootLayout({
     <html lang="en" className="" >
       <body className={`${primary.variable} ${secondary.variable} antialiased  flex flex-col`}>
         <Toaster position="top-center" gutter={8} toastOptions={{ duration: 10000 }} />
-        <Header />
+        <SidebarAndHeader />
         <main className="flex min-h-screen w-full flex-1 flex-col gap-space-6 ">{children}</main>
         <Footer />
       </body>
